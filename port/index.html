@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Razeen - Fullstack & Cybersecurity</title>
+    <meta name="description" content="Mohamed Razeen - Fullstack Developer & Cybersecurity Specialist Portfolio">
+    <meta name="author" content="Mohamed Razeen">
+    
+    <meta property="og:title" content="Mohamed Razeen - Fullstack & Cybersecurity">
+    <meta property="og:description" content="Fullstack Developer & Cybersecurity Specialist Portfolio">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pro': {
+                            'dark': 'hsl(220, 25%, 8%)',
+                            'darker': 'hsl(220, 30%, 5%)',
+                            'light': 'hsl(220, 15%, 95%)',
+                            'muted': 'hsl(220, 10%, 70%)',
+                            'accent': 'hsl(220, 30%, 15%)',
+                            'violet': 'hsl(270, 70%, 60%)',
+                            'cyan': 'hsl(190, 90%, 55%)',
+                            'emerald': 'hsl(160, 80%, 50%)',
+                            'amber': 'hsl(45, 90%, 60%)'
+                        },
+                        'neon': {
+                            'cyan': 'hsl(180, 100%, 50%)',
+                            'purple': 'hsl(270, 100%, 50%)',
+                            'green': 'hsl(120, 100%, 50%)',
+                            'pink': 'hsl(330, 100%, 50%)'
+                        }
+                    },
+                    fontFamily: {
+                        'playfair': ['Poppins', 'sans-serif'],
+                        'inter': ['Poppins', 'sans-serif'],
+                        'fira': ['Fira Code', 'monospace']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow-pulse': 'glow-pulse 2s ease-in-out infinite alternate',
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        'glow-pulse': {
+                            '0%': { opacity: '0.5', transform: 'scale(1)' },
+                            '100%': { opacity: '1', transform: 'scale(1.05)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-pro-dark text-pro-light font-inter">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-pro-dark/80 backdrop-blur-md border-b border-pro-accent">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold font-playfair text-pro-violet">
+                    Mohamed Razeen
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="text-pro-light hover:text-pro-violet transition-colors nav-link">Home</a>
+                    <a href="#about" class="text-pro-light hover:text-pro-violet transition-colors nav-link">About</a>
+                    <a href="#skills" class="text-pro-light hover:text-pro-violet transition-colors nav-link">Skills</a>
+                    <a href="#projects" class="text-pro-light hover:text-pro-violet transition-colors nav-link">Projects</a>
+                    <a href="#certificates" class="text-pro-light hover:text-pro-violet transition-colors nav-link">Certificates</a>
+                    <a href="#contact" class="text-pro-light hover:text-pro-violet transition-colors nav-link">Contact</a>
+                </div>
+                <button class="md:hidden mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="md:hidden mobile-menu hidden mt-4 space-y-2">
+                <a href="#hero" class="block text-pro-light hover:text-pro-violet transition-colors nav-link">Home</a>
+                <a href="#about" class="block text-pro-light hover:text-pro-violet transition-colors nav-link">About</a>
+                <a href="#skills" class="block text-pro-light hover:text-pro-violet transition-colors nav-link">Skills</a>
+                <a href="#projects" class="block text-pro-light hover:text-pro-violet transition-colors nav-link">Projects</a>
+                <a href="#certificates" class="block text-pro-light hover:text-pro-violet transition-colors nav-link">Certificates</a>
+                    <a href="#contact" class="block text-pro-light hover:text-pro-violet transition-colors nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="particles-container"></div>
+        <div class="floating-orbs"></div>
+    </div>
+
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold font-playfair text-pro-light mb-6">
+                    Hi, I'm <span class="text-transparent bg-gradient-to-r from-pro-violet to-pro-cyan bg-clip-text">Mohamed Razeen</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-pro-muted mb-8 font-inter">
+                    Fullstack Developer & Junior Cybersecurity Analyst
+                </h2>
+                <p class="text-lg text-pro-muted max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Passionate about creating secure, scalable web applications and protecting digital assets. 
+                    I combine cutting-edge development skills with cybersecurity expertise to build robust solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="bg-gradient-to-r from-pro-violet to-pro-cyan text-white px-8 py-4 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg">
+                        Get In Touch
+                    </a>
+                    <a href="mohamed_resume.pdf" download="Mohamed_Resume.pdf" class="border border-pro-violet text-pro-violet hover:bg-pro-violet hover:text-white px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-pro-darker/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold font-playfair text-pro-light mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-pro-violet to-pro-cyan mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6 text-center">
+                <p class="text-lg text-pro-muted leading-relaxed">
+                    Hi, I’m Mohamed Razeen — a passionate and driven Computer Science student specializing in Cyber Security with a strong foundation in HTML, CSS, and full-stack development. I enjoy building clean, user-friendly, and secure digital experiences, and I’m always eager to learn new technologies.
+When I’m not coding, you’ll find me exploring ways to strengthen my skills in web development, ethical hacking, and bug bounty methodologies. My goal is to grow as a cybersecurity professional and contribute to creating safer digital spaces.
+I’m active on social media as Next Level X, where I share my projects and connect with like-minded individuals. Let’s build something amazing together!
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold font-playfair text-pro-light mb-4">Skills & Expertise</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-pro-violet to-pro-cyan mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-pro-accent p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-pro-light mb-4">Frontend Development</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-item">
+                            <i class="fab fa-react text-pro-violet"></i> <span>React.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-vuejs text-pro-cyan"></i> <span>Vue.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code text-pro-emerald"></i> <span>TypeScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-tailwind-css text-pro-amber"></i> <span>Tailwind CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5 text-pro-violet"></i> <span>HTML5 & CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js text-pro-cyan"></i> <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-pro-accent p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-pro-light mb-4">Backend Development</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js text-pro-violet"></i> <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python text-pro-cyan"></i> <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-spider text-pro-emerald"></i> <span>Django</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database text-pro-amber"></i> <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf text-pro-violet"></i> <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java text-pro-cyan"></i> <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-pro-accent p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-pro-light mb-4">Cybersecurity</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt text-pro-violet"></i> <span>Penetration Testing</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search text-pro-cyan"></i> <span>Security Auditing</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line text-pro-emerald"></i> <span>Threat Analysis</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired text-pro-amber"></i> <span>Network Security</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exclamation-triangle text-pro-violet"></i> <span>Incident Response</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bug text-pro-cyan"></i> <span>Web Testing</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire-extinguisher text-pro-emerald"></i> <span>Burp Suite</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired text-pro-amber"></i> <span>Wireshark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-pro-accent p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-pro-light mb-4">Tools & Platforms</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-item">
+                            <i class="fab fa-github text-pro-violet"></i> <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-palette text-pro-cyan"></i> <span>Canva</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-palette text-pro-cyan"></i> <span>Poster Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-pro-darker/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold font-playfair text-pro-light mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-pro-violet to-pro-cyan mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-pro-accent p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-pro-light mb-3">Collage Fest Website</h3>
+                    <p class="text-pro-muted mb-4">A full-stack website for a college festival, including features for event registration, scheduling, and user management.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pro-violet/20 text-pro-violet px-2 py-1 rounded text-sm">HTML</span>
+                        <span class="bg-pro-cyan/20 text-pro-cyan px-2 py-1 rounded text-sm">CSS</span>
+                        <span class="bg-pro-emerald/20 text-pro-emerald px-2 py-1 rounded text-sm">PostgreSQL</span>
+                        <span class="bg-pro-amber/20 text-pro-amber px-2 py-1 rounded text-sm">JS</span>
+                        <span class="bg-pro-violet/20 text-pro-violet px-2 py-1 rounded text-sm">Django</span>
+                    </div>
+                    <a href="https://github.com/Razeen0/WebPro" class="text-pro-violet hover:text-pro-cyan transition-colors" target="_blank">View Project →</a>
+                </div>
+                <div class="bg-pro-accent p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-pro-light mb-3">Scanning Tool</h3>
+                    <p class="text-pro-muted mb-4">An automated scanning tool developed with Python for automating security checks and vulnerability analysis.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pro-violet/20 text-pro-violet px-2 py-1 rounded text-sm">Python</span>
+                        <span class="bg-pro-cyan/20 text-pro-cyan px-2 py-1 rounded text-sm">Automation</span>
+                        <span class="bg-pro-emerald/20 text-pro-emerald px-2 py-1 rounded text-sm">Security</span>
+                    </div>
+                    <a href="#" class="text-pro-violet hover:text-pro-cyan transition-colors">View Project →</a>
+                </div>
+                <div class="bg-pro-accent p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-pro-light mb-3">This Portfolio</h3>
+                    <p class="text-pro-muted mb-4">A sleek, modern portfolio showcasing my skills and projects, built with a focus on clean design and interactive elements.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pro-violet/20 text-pro-violet px-2 py-1 rounded text-sm">HTML</span>
+                        <span class="bg-pro-cyan/20 text-pro-cyan px-2 py-1 rounded text-sm">CSS</span>
+                        <span class="bg-pro-emerald/20 text-pro-emerald px-2 py-1 rounded text-sm">JavaScript</span>
+                        <span class="bg-pro-amber/20 text-pro-amber px-2 py-1 rounded text-sm">Tailwind CSS</span>
+                    </div>
+                    <a href="#" class="text-pro-violet hover:text-pro-cyan transition-colors">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold font-playfair text-pro-light mb-4">Certifications</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-pro-violet to-pro-cyan mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="https://www.coursera.org/account/accomplishments/verify/ZDHPV1UOJUX5" target="_blank" class="bg-pro-accent p-6 rounded-lg text-center hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <img src="ehe.png" alt="EC-Council Logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="text-lg font-semibold text-pro-light mb-2">Ethical Hacking Essentials (EHE)</h3>
+                    <p class="text-pro-muted">EC-Council</p>
+                </a>
+
+
+                <a href="https://www.coursera.org/account/accomplishments/verify/H6EEUYIY6B5W" target="_blank" class="bg-pro-accent p-6 rounded-lg text-center hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <img src="g.png" alt="git hub Logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="text-lg font-semibold text-pro-light mb-2">Introduction to Git and Github</h3>
+                    <p class="text-pro-muted">Google</p>
+                </a>
+
+
+                <a href="https://www.coursera.org/account/accomplishments/verify/RAQUP6IHMHNY" target="_blank" class="bg-pro-accent p-6 rounded-lg text-center hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <img src="meta.png" alt="Meta Logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="text-lg font-semibold text-pro-light mb-2">Programming with JavaScript</h3>
+                    <p class="text-pro-muted">Meta</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-pro-darker/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold font-playfair text-pro-light mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-pro-violet to-pro-cyan mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-pro-light mb-4">Let's Connect</h3>
+                            <p class="text-pro-muted leading-relaxed">
+                                I'm always open to discussing new opportunities, interesting projects, 
+                                or just having a chat about technology and cybersecurity.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-pro-violet to-pro-cyan rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-pro-light font-medium">Email</p>
+                                    <p class="text-pro-muted">mohdrazeen885@gmail.com.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-pro-cyan to-pro-emerald rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-pro-light font-medium">Phone</p>
+                                    <p class="text-pro-muted">9003394564</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-semibold text-pro-light mb-4">Socials</h3>
+                            <div class="flex items-center gap-4">
+                                <a href="https://github.com/Razeen0?tab=repositories" target="_blank" class="w-12 h-12 bg-pro-accent rounded-lg flex items-center justify-center text-pro-violet hover:text-pro-cyan transition-colors">
+                                    <i class="fab fa-github text-3xl"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/mohamed-razeen-b34220318/" target="_blank" class="w-12 h-12 bg-pro-accent rounded-lg flex items-center justify-center text-pro-violet hover:text-pro-cyan transition-colors">
+                                    <i class="fab fa-linkedin-in text-3xl"></i>
+                                </a>
+                                <a href="https://bugcrowd.com/h/razeee" target="_blank" class="w-12 h-12 bg-pro-accent rounded-lg flex items-center justify-center text-pro-violet hover:text-pro-cyan transition-colors">
+                                    <i class="fas fa-bug text-3xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <label class="block text-pro-light font-medium mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 bg-pro-accent border border-pro-muted/20 rounded-lg text-pro-light focus:outline-none focus:border-pro-violet transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-pro-light font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-pro-accent border border-pro-muted/20 rounded-lg text-pro-light focus:outline-none focus:border-pro-violet transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-pro-light font-medium mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 bg-pro-accent border border-pro-muted/20 rounded-lg text-pro-light focus:outline-none focus:border-pro-violet transition-colors resize-none" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-pro-violet to-pro-cyan text-white py-3 rounded-lg hover:scale-105 transition-all duration-300 font-medium">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-pro-darker py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-pro-muted">© 2025 Mohamed Razeen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
